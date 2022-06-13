@@ -1,0 +1,29 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('build')
+        {
+            steps 
+            {
+                mkdir ss
+                echo "Build is running"
+            }
+        }
+        stage('test')
+        {
+            steps{
+                cd ss
+                echo "Test is running"
+            }
+        }
+        stage('deploy')
+        {
+            steps{
+                touch ssfile
+                echo "Deploy is running"
+            }
+        }
+    }
+}
