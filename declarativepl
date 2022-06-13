@@ -17,7 +17,6 @@ pipeline{
         stage('deploy')
         {
             steps{
-                touch ssfile
                 echo "Deploy is running"
             }
         }
